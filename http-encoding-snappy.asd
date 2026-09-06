@@ -1,9 +1,9 @@
 (defsystem "http-encoding-snappy"
-  :version "0.1.0"
-  :description "snappy Content-Encoding backend for http-protocol (cl-stack-snappy)"
+  :version "0.1.1"
+  :description "snappy Content-Encoding adapter over compression-protocol"
   :author "egao1980"
   :license "MIT"
-  :depends-on ("http-protocol" "cl-stack-snappy")
+  :depends-on ("http-protocol" "compression-protocol" "cl-stack-snappy")
 
   :serial t
   :pathname "src"
