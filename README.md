@@ -6,7 +6,12 @@ Bytes go through [`compression-protocol`](https://github.com/egao1980/compressio
 consumers — omit from `Accept-Encoding` when unavailable. Wire is **raw** Snappy (not framed).
 
 ```bash
-# siblings: http-protocol/ cl-stack-snappy/ http-encoding-snappy/
-# natives: cl-stack-snappy/lib/<os>-<arch>/
-ros -e '(asdf:test-system "http-encoding-snappy")'
+# CI: canned cl-repository test-system.yml. Deps from ghcr.io/egao1980/cl-systems.
+# Local: (asdf:test-system "http-encoding-snappy")
+```
+
+## Publish
+
+```bash
+gh workflow run publish-checkout.yml -R egao1980/http-encoding-snappy
 ```
